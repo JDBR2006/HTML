@@ -1,0 +1,70 @@
+html{
+font-size: 16px;
+font-family: sans-serif;
+}
+body{
+    background-color: rgb(172, 234, 255);
+}
+.contenedor{
+    max-width: 450px;
+    height: auto;
+    background-color: rgb(159, 218, 255);
+    margin: 5% auto;
+    padding-bottom: 16px;
+}
+header{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 5px;
+    border-top: solid 8px rgb(0, 95, 153);
+    margin-bottom: 5px;
+}
+header h2{
+    font-weight: bold; /* Negrilla */
+    color: black;
+    font-size: 18px; /* tamaño letra */
+}
+.form_register{
+    padding: 0 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    background-color: rgb(142, 195, 255);
+}
+.btn_accion{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+input, .btn_enviar, .btn_limpiar{
+    background-color: rgb(248, 252, 255);
+    padding: 8px;
+    margin: 8px 0;
+    outline: none; /* quitar bordes color negro */
+    transition: all .5s; /* animacion sencilla delay */
+}
+input:focus{
+    background-color: rgb(189, 243, 255);
+    border-color: rgb(0, 183, 255);
+}
+.btn_enviar, .btn_limpiar{
+    width: 40%;
+    border-radius: 25px; /* bordes redondeados */
+    background-color: rgb(209, 251, 255);
+    color: rgb(0, 153, 255);
+    margin-left: 25px;
+}
+#terminos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
