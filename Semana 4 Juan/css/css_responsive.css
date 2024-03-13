@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-height: 100%;
+}
+body{
+    font-family: tahoma;
+    font-size: 18px;
+    background-image: url(img/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* seccion css <header> */
+#header{
+    background-color: rgb(150, 229, 255);
+    border: 2px solid rgb(43, 135, 255);
+    border-radius: 22px;/* bordes redondeados */
+    display: flex; /* tecnica para posicionamiento de elementos */
+    flex-direction: row; /*en fila */
+    justify-content: center; /* alinear horizontal */
+    align-items: center; /*alinear vertical */
+    grid-area: header; /*nombre css grid del <header> */
+}
+ul{
+    padding: 0 0;
+    margin: 0 1px;
+}
+li{
+    list-style: none; /* BORRAR VIÑETAS */
+    margin: 0 5px;
+    font: bold 12px verdana;
+}
+
+a{
+    color: rgb(214, 242, 255);
+    text-decoration: none;
+}
+/* seccion css <NAV> */
+
+#menu{
+    grid-area: nav; /*nombre css grid del <NAV> */
+    background-color: rgb(0, 153, 255);
+    border: 2px solid rgb(140, 213, 255);
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+/* seccion css menu y submenu */
+.menuB >li{
+    position: relative;
+    display: inline-block;
+}
+.menuB >li>a{
+    display: block;
+    padding: 15px 20px;
+    color: rgb(179, 224, 245);
+    text-decoration: none;
+}
+.menuB li a:hover{ /*evento css al pasar mouse */
+    color: rgb(70, 212, 255);
+    transition: all .3s;
+}
+/* seccion de estilos submenu */
+.submenu{
+    position: absolute;
+    background-color: rgb(0, 153, 255);
+    width: 120%;
+    display: none;
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: rgb(179, 224, 245);
+    text-decoration: none;
+}
+.menuB li:hover .submenu{
+    display: block;
+    z-index: 100;
+}
+/* seccion css buscador y lupa */
+.buscarbox input{
+    height: 25px;
+    width: 0px;
+    padding: 0;
+    margin: 0;
+    border-radius: 40px;
+    border: 0px;
+    padding-right: 50px;
+    transition: ease 0.8s;
+}
+.buscarbox input:hover{
+    width: 150px;
+    padding-left: 150px;
+    outline: none;
+}
+/* seccion css <section> */
+#main{
+    grid-area: main;
+    border: 2px solid rgb(72, 173, 255);
+    border-radius: 22px;
+    max-width: 100%;
+    height: auto;
+    /* efecto glass */
+    background-color: rgba(99, 211, 255, 0.6);
+    backdrop-filter: blur(5px);
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px;
+}
+/* seccion css <article> */
+.programas{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 1px solid rgb(0, 119, 255);
+    border-radius: 15px;
+}
+section article{
+    background-color: rgba(210, 242, 255, 0.671);
+    backdrop-filter: blur(5px);
+    margin: 20px;
+}
+/* seccion css <aside> */
+#sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(99, 211, 255, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 22px;
+    border: 2px solid rgb(0, 119, 255);
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+/* seccion css <footer> */
+#footer{
+    grid-area: footer;
+    padding-top: 20px;
+    border: 2px solid rgb(0, 119, 255);
+    border-radius: 22px;
+    clear: both;
+    background-color: rgba(99, 211, 255, 0.6);
+    backdrop-filter: blur(5px);
+}
+#redes a{
+    padding: 5px;
+    margin: 0px;
+}
+#redes a i:hover{
+    transform: scale(2.0); /*aumenta el tamaño del icono al pasar el mouse */
+}
+/* seccion de css para iconos de fontawesome */
+i[class^="fa"]{
+    color: blue;
+    font-size: 18px;
+}
+i[class^="fab"]{
+    color: black;
+    font-size: 30px;
+    border: 1px solid transparent;
+    margin: 0px;
+}
