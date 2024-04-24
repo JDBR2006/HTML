@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TALLER INICIO SESION</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/WhatsApp Image 2024-04-16 at 6.47.57 PM (2).jpeg" alt="">
+        <h1>INGRESO DE USUARIO CON CONTRASEÑA</h1>
+        <h2>SISTEMA DE GESTION NUBANK</h2>
+        <br><br>
+        <script>
+            var pasw2;//contraseña ingresada por usuario
+            var sw=0;//variable de control de ingreso apagada
+            var clave=12345;//clave asignada
+            //ciclo for
+            for(f=1;f<=3;f++)
+            {
+                pasw2=parseInt(prompt("INGRESE CONTRASEÑA DE INGRESO"));
+                //condicional clave
+                if(pasw2==clave)
+                {
+                    swal("APRECIADO USUARIO","ACCESO OTORGADO","success");
+                    sw=1;//var control activada
+                    break;//salga del ciclo
+                }
+            }
+            //salida
+            if(sw==0){
+                swal("APRECIADO USUARIO","ACCESO BLOQUEADO","error");
+                document.write("<font color='red'>"+"SU ACCESO HA SIDO BLOQUEADO.... ESPERE 1 MINUTO..."+"</font>");
+            }else{
+                document.write("<font color='blue'>"+"BIENVENIDO AL SISTEMA DE GESTION NUBANK"+"</font>");
+            }
+        </script>
+    </center>
+</body>
+</html>

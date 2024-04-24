@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLETIN NOTAS</title>
+</head>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<body>
+<center>        
+    <img src="./img/WhatsApp Image 2024-04-16 at 6.47.57 PM (1).jpeg" alt="" height="150" width="150">
+    <h1>BOLETIN DE NOTAS SEMESTRE A2024</h1>
+    <h2>MATERIA PAE JAVASCRIPT</h2>
+    <h3>NOTAS [1=DESEMEPEÑO - 2=TALLERES EN CLASE - 3=CUESTIONARIOS]</h3>
+    <script>
+        let nota_std, suma_nota, prom;
+        suma_nota=0;//sumador de notas
+        prom=0;// promedio de definitiva
+        num=1;//variable de ciclo while, contador de notas
+        //ENTRADA
+        nombre_std=prompt("INGRESE NOMBRE ESTUDIANTE");
+        //ciclo while
+        while(num<=3)
+        {
+            nota_std=parseFloat(prompt("INGRESE NOTA [1 A 5]"));
+            //ACUMULADO
+            suma_nota+=nota_std;// es igual a  suma_nota=suma_nota+nota_std
+            //contador del ciclo while
+            num++;
+        }
+        //CALCULAR NOTA FINAL
+        prom=suma_nota/(num-1);
+        //condicional
+        if(prom>=3.0){
+            swal("APRECIADO ESTUDIANTE","FELICITACIONES APROBASTE LA MATERIA PAE JAVASCRIPT","Success");
+            document.write("PASA AL SIGUIENTE NIVEL DE PROGRAMACIÓN PHP");
+        }else{
+            swal("APRECIADO ESTUDIANTE","REPROBASTE MATERIA PAE JAVASCRIPT","error");
+            document.write("DEBES DE HACER CURSO REMEDIAL DE RECUPERACIÓN");
+        }
+        //SALIDA
+        document.write("<br>"+"<br>");
+        document.write("*********************************************************************"+"<br>");
+        document.write("ESTUDIANTE ..."+nombre_std+"<br>");
+        document.write("NOTA FINAL DE MATERIA PAE ES ..."+prom.toFixed(2)+"<br>");
+        document.write("*********************************************************************"+"<br>");
+    </script>
+    </center>
+</body>
+</html>
