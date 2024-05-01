@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metodo INDEXOF</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+</head>
+<body>
+    <center>
+        <h1>TALLER METODO INDEXOF</h1>
+        <h2>BUSQUEDA DE ELEMENTOS EN ARRAYS</h2>
+        <br><br>
+        <p>Estudiante se encuentra en el indice No.</p>
+        <p id="std"></p>
+        <script>
+            let std=new Array();
+            //captura
+            let=num=parseInt(prompt("INGRESE TOPE MAXIMO DE ARRAY"));
+            for(i=0;i<num;i++){
+                std[i]=prompt("INGRESE NOMBRE..."+i);
+            }
+            //BUSCAR NOMBRE EN ARRAY
+            let buscar=prompt("INGRESE NOMBRE A BUSCAR..");
+            let find=std.indexOf(buscar.trim()); //Indexof es para buscar y generar el indice de ubicacion y trim es para eliminar los espacios a la izquierda y a la derecha
+            if(find>-1){
+                swal("Apreciado usuario","DATO ENCONTRADO..","success");
+                document.getElementById("std").innerHTML=find+"...."+buscar;
+            }else{
+                swal("Apreciado usuario","DATO NO ENCONTRADO..","error");
+                document.getElementById("std").innerHTML="ERROR...NOMBRE NO ENCONTRADO.."+buscar;
+            }
+        </script>
+    </center>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo map arrays</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>TALLER DE METODO MAP ARRAYS</h1>
+        <h2>TRANSFORMAR ORDENAMIENTO INDICES ARRAYS</h2>
+        <br><br>
+        <script>
+            //array inicial
+            let array=[10,20,30,40,50];
+            //indices de reordenamiento a aplicar a array
+            let nuevosIndices=[4,3,2,1,0];
+            //crear nuevo array con elementos reordenadossegun indices definidos
+            let nuevoArray=nuevosIndices.map(index => array[index]);
+            //salida final
+            document.write("ARRAY INICIAL...."+array);
+            console.log("array inicial",array);
+            document.write("<br>"+"<br>");
+            //nuevo array
+            document.write("Nuevo arrays reordenado.."+nuevoArray);
+            console.log("Nuevo arrays reordenado..",nuevoArray);
+        </script>
+    </center>
+</body>
+</html>
